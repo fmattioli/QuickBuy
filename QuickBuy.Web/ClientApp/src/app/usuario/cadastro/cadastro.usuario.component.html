@@ -1,0 +1,101 @@
+<div class="text-center">
+  <form class="form-signin">
+
+    <h1 class="h4 mb-2 login">Crie sua conta</h1>
+    <label for="inputNome" class="sr-only">Nome</label>
+    <input type="text" id="inputNome" name="nome"
+           placeholder="Nome"
+           class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':nome.invalid && (nome.dirty || nome.touched),
+           'is-valid':nome.valid && (nome.dirty || nome.touched)
+           }"
+           [(ngModel)]="usuario.nome"
+           #nome="ngModel"
+           required />
+
+    <div class="invalid-feedback mb-2" *ngIf="nome.invalid && (nome.dirty || nome.touched)">
+      <div *ngIf="nome.errors.required">
+        Preencha o campo nome corretamente!
+      </div>
+    </div>
+
+    <label for="inputSobreNome" class="sr-only">sobreNome</label>
+    <input type="text" id="inputSobreNome" name="sobreNome"
+           placeholder="Sobrenome"
+           class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':sobreNome.invalid && (sobreNome.dirty || sobreNome.touched),
+           'is-valid':sobreNome.valid && (sobreNome.dirty || sobreNome.touched)
+           }"
+           [(ngModel)]="usuario.sobreNome"
+           #sobreNome="ngModel"
+           required />
+
+    <div class="invalid-feedback mb-2" *ngIf="sobreNome.invalid && (sobreNome.dirty || sobreNome.touched)">
+      <div *ngIf="sobreNome.errors.required">
+        Preencha o campo sobreNome corretamente!
+      </div>
+    </div>
+
+
+
+    <label for="inputEmail" class="sr-only"></label>
+    <input type="email" id="inputEmail" name="email"
+           placeholder="Email"
+           class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':email.invalid && (email.dirty || email.touched),
+           'is-valid':email.valid && (email.dirty || email.touched)
+           }"
+           [(ngModel)]="usuario.email"
+           #email="ngModel"
+           email
+           required />
+
+    <div class="invalid-feedback mb-2" *ngIf="email.invalid && (email.dirty || email.touched)">
+      <div *ngIf="email.errors.required">
+        Preencha o campo E-mail corretamente!
+      </div>
+      <div *ngIf="email.errors.email">
+        Preencha o campo E-mail com um e-mail válido!
+      </div>
+    </div>
+
+    <label for="inputSenha" class="sr-only"></label>
+    <input type="password" id="inputSenha" name="senha"
+           placeholder="Senha"
+           class="form-control mb-2"
+           [ngClass]="{
+           'is-invalid':senha.invalid && (senha.dirty || senha.touched),
+           'is-valid':senha.valid && (senha.dirty || senha.touched)
+           }"
+           [(ngModel)]="usuario.senha"
+           #senha="ngModel"
+           senha
+           required />
+    <div class="invalid-feedback mb-2" *ngIf="senha.invalid && (senha.dirty || senha.touched)">
+      <div *ngIf="senha.errors.required">
+        Preencha o campo Senha corretamente!
+      </div>
+
+    </div>
+
+    <button class="btn btn-primary btn-block mb-2" (click)="cadastrar()" [disabled]="ativarSpinner">
+      <span class="spinner-border spinner-border-sm" role="status" aria-hidden="true" *ngIf="ativarSpinner"></span>
+      Cadastrar
+    </button>
+    Já tem uma conta? <a [routerLink]='["/entrar"]' class="mb-2">Entrar</a>
+
+    <div class="alert alert-sucess" *ngIf="usuarioCadastrado">
+      Usuario cadastrado com sucesso! <a class="alert-link" [routerLink]='["/entrar"]'>Entrar</a>
+    </div>
+
+    <div class="alert alert-danger" *ngIf="mensagem">
+      {{mensagem}}
+    </div>
+
+
+
+  </form>
+</div>

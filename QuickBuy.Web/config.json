@@ -1,0 +1,5 @@
+{
+  "ConnectionStrings": {
+    "QuickBuyDB": "Server=FMATTIOLI\\SQLEXPRESS;Database=QuickBuyDB;Trusted_Connection=True;MultipleActiveResultSets=true"
+  }
+}
