@@ -1,17 +1,17 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {}
+    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {}
   },
   "projects": {
-    "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectUniqueName": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "projectName": "QuickBuy.Dominio",
-        "projectPath": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Dominio\\obj\\",
+        "outputPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -61,14 +61,14 @@
         }
       }
     },
-    "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
+    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+        "projectUniqueName": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
         "projectName": "QuickBuy.Repositorio",
-        "projectPath": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+        "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
         "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
+        "outputPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
         "projectStyle": "PackageReference",
         "fallbackFolders": [
           "C:\\Microsoft\\Xamarin\\NuGet\\",
@@ -89,8 +89,8 @@
         "frameworks": {
           "netcoreapp3.1": {
             "projectReferences": {
-              "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
-                "projectPath": "C:\\BackEnd\\QuickBuy\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
+              "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+                "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
               }
             }
           }
