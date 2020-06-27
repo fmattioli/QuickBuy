@@ -5,7 +5,7 @@ import { Router } from "@angular/router";
 
 @Component({
   selector: "app-loja",
-  templateUrl: "./loja pesquisa.component.html",
+  templateUrl: "./loja.pesquisa.component.html",
   styleUrls: ["./loja.pesquisa.component.css"]
 })
 

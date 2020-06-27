@@ -60,6 +60,34 @@ namespace QuickBuy.Web.Controllers
             }
         }
 
+        [HttpPut("atualizarProduto")]
+        [Authorize]
+        public IActionResult Atualizar([FromServices] IProdutoRepositorio produtoRepositorio,
+                                    [FromBody] Produto produto, [FromServices] IHttpContextAccessor httpContextAccessor, [FromHeader] string Authorization)
+        {
+            try
+            {
+                var x = httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+                //var formFile = httpContextAccessor.HttpContext.Request.Headers["Authorization"];
+                produto.Validate();
+                if (!produto.EhValido)
+                {
+                    return BadRequest(produto.ObterMensagensValidacao());
+                }
+
+                if (produto.Id > 0)
+                {
+                    produtoRepositorio.Atualizar(produto);
+                }
+
+                return Created("api/produto", produto);
+            }
+            catch (Exception erro)
+            {
+                return BadRequest(erro.ToString());
+            }
+        }
+
         [HttpPost("Deletar")]
         [Authorize(Roles = "Gerente")]
         public IActionResult Deletar([FromServices] IProdutoRepositorio produtoRepositorio, [FromBody] Produto produto)
@@ -75,6 +103,7 @@ namespace QuickBuy.Web.Controllers
             }
         }
         [HttpPost("EnviarArquivo")]
+        [Authorize]
         public IActionResult EnviarArquivo([FromServices] IHttpContextAccessor httpContextAccessor, [FromServices] IWebHostEnvironment hostingEnvironment)
         {
             try

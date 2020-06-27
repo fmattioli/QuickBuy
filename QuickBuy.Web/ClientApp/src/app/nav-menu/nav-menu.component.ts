@@ -30,7 +30,12 @@ export class NavMenuComponent {
     this.router.navigate(['/']);
   }
 
+  public usuarioAdmin(): boolean {
+    return this.usuarioServico.usuarioNivel();
+  }
   get usuario() {
     return this.usuarioServico.usuario;
   }
+
+
 }

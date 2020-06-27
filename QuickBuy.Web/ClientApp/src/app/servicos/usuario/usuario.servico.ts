@@ -45,6 +45,10 @@ export class UsuarioServico {
     return this._usuario != null && this._usuario.email != "" && this._usuario.senha != "";
   }
 
+  public usuarioNivel(): boolean{
+    return this.usuario_autenticado() && this.usuario.nivel.toUpperCase() == "GERENTE";
+  }
+
   public limpar_sessao() {
     sessionStorage.setItem("usuario-autenticado", "");
     sessionStorage.setItem("token", "");
