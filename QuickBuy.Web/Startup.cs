@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.AspNetCore.Builder;
 using Microsoft.AspNetCore.Hosting;
 using Microsoft.AspNetCore.Http;
@@ -6,9 +7,12 @@ using Microsoft.EntityFrameworkCore;
 using Microsoft.Extensions.Configuration;
 using Microsoft.Extensions.DependencyInjection;
 using Microsoft.Extensions.Hosting;
+using Microsoft.IdentityModel.Tokens;
 using QuickBuy.Dominio.Contratos;
+using QuickBuy.Dominio.ObjetoDeValor;
 using QuickBuy.Repositorio.Contexto;
 using QuickBuy.Repositorio.Repositorios;
+using System.Text;
 
 namespace QuickBuy.Web
 {
@@ -29,13 +33,32 @@ namespace QuickBuy.Web
             services.AddSingleton<IHttpContextAccessor, HttpContextAccessor>();
             //Add connection
             var connectionString = Configuration.GetConnectionString("QuickBuyDB");
+            var objConfig = Configuration.GetSection("Secret:Key");
+            var KeyIncripted = objConfig.Value;
             services.AddDbContext<QuickBuyContexto>(option =>
                                                     option.UseLazyLoadingProxies()
                                                     .UseSqlServer(connectionString, m => m.MigrationsAssembly("QuickBuy.Repositorio")));
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
-
-
+            services.AddSingleton<IAssistente, Assistente>(k => new Assistente { Key = KeyIncripted });
+            var key = Encoding.ASCII.GetBytes(KeyIncripted);
+            services.AddAuthentication(x =>
+            {
+                x.DefaultAuthenticateScheme = JwtBearerDefaults.AuthenticationScheme;
+                x.DefaultChallengeScheme = JwtBearerDefaults.AuthenticationScheme;
+            })
+            .AddJwtBearer(x =>
+            {
+                x.RequireHttpsMetadata = false;
+                x.SaveToken = true;
+                x.TokenValidationParameters = new TokenValidationParameters
+                {
+                    ValidateIssuerSigningKey = true,
+                    IssuerSigningKey = new SymmetricSecurityKey(key),
+                    ValidateIssuer = false,
+                    ValidateAudience = false
+                };
+            });
 
             services.AddSpaStaticFiles(configuration =>
             {
@@ -61,6 +84,12 @@ namespace QuickBuy.Web
             }
 
             app.UseRouting();
+            app.UseCors(x => x
+                .AllowAnyOrigin()
+                .AllowAnyMethod()
+                .AllowAnyHeader());
+            app.UseAuthentication();
+            app.UseAuthorization();
 
             app.UseEndpoints(endpoints =>
             {

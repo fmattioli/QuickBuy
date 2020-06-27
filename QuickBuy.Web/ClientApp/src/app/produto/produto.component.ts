@@ -62,11 +62,20 @@ export class ProdutoComponent implements OnInit {
           this.router.navigate(['/pesquisar-produto']);
         },
         e => {
-          console.log(e.error);
-          this.mensagem = e.error;
+          console.log(e.status);
+          this.mensagem = e.status;
+          this.mensagem = this.retornarMensagemErro(e.status);
           this.ativarEspera(false);
         }
       )
+  }
+  retornarMensagemErro(status: any): string {
+    switch (status) {
+      case 401:
+        return "Você precisa estar logado para cadastrar produtos!";
+      default:
+        return "";
+    }
   }
 
   public ativarEspera(ativar: boolean) {

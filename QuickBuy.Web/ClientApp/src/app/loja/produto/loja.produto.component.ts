@@ -9,9 +9,13 @@ import { Produto } from "../../modelo/produto";
 })
 
 export class LojaProdutoComponent implements OnInit {
+  public produto: Produto;
 
-    ngOnInit(): void {
-        
+  ngOnInit(): void {
+    var produtoDetalhe = sessionStorage.getItem('produtoDetalhe');
+    if (produtoDetalhe) {
+      this.produto = JSON.parse(produtoDetalhe);
+    }
   }
 
   constructor(private produtoServico: ProdutoServico) {
@@ -19,6 +23,6 @@ export class LojaProdutoComponent implements OnInit {
   }
 
 
-  
+
 
 }

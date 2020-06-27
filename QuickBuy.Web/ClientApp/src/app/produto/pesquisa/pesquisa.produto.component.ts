@@ -11,6 +11,7 @@ import { Router } from "@angular/router";
 
 export class PesquisaProdutoComponent implements OnInit {
   public produtos: Produto[];
+    mensagem: string;
 
   ngOnInit(): void {
 
@@ -40,8 +41,8 @@ export class PesquisaProdutoComponent implements OnInit {
           this.produtos = produtos;
           console.log(produtos);
         },
-        erro => {
-          console.log(erro.error);
+        e => {
+          this.mensagem = this.retornarMensagemErro(e.status);
         }
       );
     }
@@ -51,4 +52,16 @@ export class PesquisaProdutoComponent implements OnInit {
     sessionStorage.setItem('produtoSession', JSON.stringify(produto));
     this.router.navigate(['/produto']);
   }
+
+  retornarMensagemErro(status: any): string {
+    switch (status) {
+      case 401:
+        return "Você precisa estar logado para excluir um produto!!!";
+      case 403:
+        return "Você não tem permissão para excluir produtos!!!";
+      default:
+        return "";
+    }
+  }
 }
+

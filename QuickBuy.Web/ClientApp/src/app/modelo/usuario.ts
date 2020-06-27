@@ -4,4 +4,6 @@ export class Usuario {
   senha: string;
   nome: string;
   sobreNome: string;
+  nivel: string;
+  token: string;
 }

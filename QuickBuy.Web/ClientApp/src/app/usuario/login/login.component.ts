@@ -34,6 +34,7 @@ export class LoginComponent implements OnInit {
         usuario_json => {
           //retorno sem erros
           this.usuarioServico.usuario = usuario_json;
+          sessionStorage.setItem("token", this.usuarioServico.usuario.token);
           if (this.retornUrl == null) {
             this.router.navigate(['/']);
           }

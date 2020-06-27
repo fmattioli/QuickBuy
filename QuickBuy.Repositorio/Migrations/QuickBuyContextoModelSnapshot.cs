@@ -134,6 +134,10 @@ namespace QuickBuy.Repositorio.Migrations
                         .HasColumnType("nvarchar(400)")
                         .HasMaxLength(400);
 
+                    b.Property<string>("Nivel")
+                        .HasColumnType("nvarchar(50)")
+                        .HasMaxLength(50);
+
                     b.Property<string>("Nome")
                         .IsRequired()
                         .HasColumnType("nvarchar(50)")

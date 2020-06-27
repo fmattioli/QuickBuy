@@ -10,6 +10,7 @@ export class ProdutoServico implements OnInit {
 
   private _baseURL: string;
   public produtos: Produto[];
+  private tokenFull: string;
   constructor(private http: HttpClient, @Inject('BASE_URL') baseUrl: string) {
     this._baseURL = baseUrl;
   }
@@ -19,14 +20,14 @@ export class ProdutoServico implements OnInit {
   }
 
   get headers(): HttpHeaders {
-    return new HttpHeaders().append('content-type', 'application/json').append('Authorization', 'Bearer 1233333333333333333333');
-    //return new HttpHeaders().set('content-type', 'application/json');
+    return new HttpHeaders().append('content-type', 'application/json');
+    
   }
 
 
   public cadastrar(produto: Produto): Observable<Produto> {
-
-    return this.http.post<Produto>(this._baseURL + "api/produto", JSON.stringify(produto), { headers: this.headers });
+    this.tokenFull = "Bearer" +" "+ sessionStorage.getItem("token");
+    return this.http.post<Produto>(this._baseURL + "api/produto", JSON.stringify(produto), { headers: this.headers.append('Authorization', this.tokenFull) });
   }
 
   public salvar(produto: Produto): Observable<Produto> {
@@ -35,8 +36,8 @@ export class ProdutoServico implements OnInit {
   }
 
   public deletar(produto: Produto): Observable<Produto[]> {
-
-    return this.http.post<Produto[]>(this._baseURL + "api/produto/deletar", JSON.stringify(produto), { headers: this.headers });
+    this.tokenFull = "Bearer" + " " + sessionStorage.getItem("token");
+    return this.http.post<Produto[]>(this._baseURL + "api/produto/deletar", JSON.stringify(produto), { headers: this.headers.append('Authorization', this.tokenFull) });
   }
 
   public obterTodosProdutos(): Observable<Produto[]> {
@@ -51,5 +52,11 @@ export class ProdutoServico implements OnInit {
     const formData: FormData = new FormData();
     formData.append("arquivoEnviado", arquivoSelecionado, arquivoSelecionado.name);
     return this.http.post<string>(this._baseURL + "api/produto/enviarArquivo", formData);
+  }
+
+
+  private setToken():string {
+    this.tokenFull = "Bearer " + sessionStorage.getItem("token");
+    return this.tokenFull;
   }
 }

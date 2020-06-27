@@ -47,6 +47,7 @@ export class UsuarioServico {
 
   public limpar_sessao() {
     sessionStorage.setItem("usuario-autenticado", "");
+    sessionStorage.setItem("token", "");
     this._usuario = null;
   }
 

@@ -1,18 +1,17 @@
-﻿using Microsoft.AspNetCore.Mvc;
+﻿using Microsoft.AspNetCore.Authorization;
+using Microsoft.AspNetCore.Mvc;
 using QuickBuy.Dominio.Contratos;
 using QuickBuy.Dominio.Entidades;
 using System;
+using QuickBuy.Web.Services.Auth;
+using QuickBuy.Web.ViewModel;
 
 namespace QuickBuy.Web.Controllers
 {
     [Route("api/[Controller]")]
     public class UsuarioController : Controller
     {
-        private readonly IUsuarioRepositorio _usuarioRepositorio;
-        public UsuarioController(IUsuarioRepositorio usuarioRepositorio)
-        {
-            _usuarioRepositorio = usuarioRepositorio;
-        }
+        
         [HttpGet]
         public ActionResult Get()
         {
@@ -28,14 +27,26 @@ namespace QuickBuy.Web.Controllers
         }
 
         [HttpPost("VerificarUsuario")]
-        public ActionResult VerificarUsuario([FromBody] Usuario usuario)
+        [AllowAnonymous]
+        public ActionResult VerificarUsuario([FromServices] IUsuarioRepositorio usuarioRepositorio, [FromServices] IAssistente assistente, [FromBody] Usuario usuario)
         {
             try
             {
-                var usuarioRetorno = _usuarioRepositorio.Obter(usuario.Email, usuario.Senha);
+                var usuarioRetorno = usuarioRepositorio.Obter(usuario.Email, usuario.Senha);
                 if (usuarioRetorno != null)
                 {
-                    return Ok(usuarioRetorno);
+                    var token = Token.GenerateToken(usuarioRetorno, assistente.Key);
+                    var usuarioViewModel = new UsuarioViewModel
+                    {
+                        Email = usuarioRetorno.Email,
+                        Id = usuarioRetorno.Id,
+                        Nivel = usuarioRetorno.Nivel,
+                        Nome = usuarioRetorno.Nome,
+                        Senha = usuarioRetorno.Senha,
+                        SobreNome = usuarioRetorno.SobreNome,
+                        Token = token
+                    };
+                    return Ok(usuarioViewModel);
                 }
                 return BadRequest("Usuario ou senha invalidos");
             }
@@ -43,20 +54,19 @@ namespace QuickBuy.Web.Controllers
             {
                 return BadRequest(ex.ToString());
             }
-
         }
 
         [HttpPost]
-        public ActionResult Post([FromBody] Usuario usuario)
+        public ActionResult Post([FromServices] IUsuarioRepositorio usuarioRepositorio, [FromBody] Usuario usuario)
         {
             try
             {
-                var usuarioCadastrado = _usuarioRepositorio.Obter(usuario.Email);
+                var usuarioCadastrado = usuarioRepositorio.Obter(usuario.Email);
                 if(usuarioCadastrado != null)
                 {
                     return BadRequest("Usuario já existe sistema!!!");
                 }
-                _usuarioRepositorio.Adicionar(usuario);
+                usuarioRepositorio.Adicionar(usuario);
                 return Ok();
             }
             catch (Exception ex)

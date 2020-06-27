@@ -15,3 +15,12 @@ C:\BackEnd\QuickBuy\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.D
 C:\BackEnd\QuickBuy\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.dll
 C:\BackEnd\QuickBuy\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.pdb
 C:\BackEnd\QuickBuy\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.csprojAssemblyReference.cache
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\bin\Debug\netcoreapp3.1\QuickBuy.Dominio.deps.json
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\bin\Debug\netcoreapp3.1\QuickBuy.Dominio.dll
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\bin\Debug\netcoreapp3.1\QuickBuy.Dominio.pdb
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.AssemblyInfoInputs.cache
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.AssemblyInfo.cs
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.csproj.CoreCompileInputs.cache
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.dll
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.pdb
+C:\BackEnd\Quick\QuickBuy\QuickBuy.Dominio\obj\Debug\netcoreapp3.1\QuickBuy.Dominio.csprojAssemblyReference.cache
