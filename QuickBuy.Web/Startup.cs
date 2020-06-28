@@ -40,6 +40,7 @@ namespace QuickBuy.Web
                                                     .UseSqlServer(connectionString, m => m.MigrationsAssembly("QuickBuy.Repositorio")));
             services.AddScoped<IProdutoRepositorio, ProdutoRepositorio>();
             services.AddScoped<IUsuarioRepositorio, UsuarioRepositorio>();
+            services.AddScoped<IPedidoRepositorio, PedidoRepositorio>();
             services.AddSingleton<IAssistente, Assistente>(k => new Assistente { Key = KeyIncripted });
             var key = Encoding.ASCII.GetBytes(KeyIncripted);
             services.AddAuthentication(x =>

@@ -5,6 +5,7 @@ import { Produto } from "../../modelo/produto";
 
 export class LojaCarrinhoCompras implements OnInit {
   
+  
 
   public produtos: Produto[] = [];
   ngOnInit(): void {
@@ -35,6 +36,7 @@ export class LojaCarrinhoCompras implements OnInit {
     if (produtoLocalStorage) {
       return JSON.parse(produtoLocalStorage);
     }
+    return this.produtos;
   }
 
   public removerProduto(produto: Produto) {
@@ -48,5 +50,16 @@ export class LojaCarrinhoCompras implements OnInit {
 
   atualizar(produtos: Produto[]) {
     localStorage.setItem("produtoLocalStorage", JSON.stringify(produtos));
+  }
+
+  public temItensCarrinhoCompras(): boolean{
+    var itens = this.obterProdutos();
+    
+    return (itens.length > 0);
+  }
+
+
+  public limparCarrinhoCompras() {
+    localStorage.setItem("produtoLocalStorage", "");
   }
 }

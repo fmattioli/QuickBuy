@@ -1,6 +1,11 @@
 import { Component, OnInit } from "@angular/core";
 import { LojaCarrinhoCompras } from "../carrinho-compras/loja.carrinho.compras";
 import { Produto } from "../../modelo/produto";
+import { Pedido } from "../../modelo/pedido";
+import { UsuarioServico } from "../../servicos/usuario/usuario.servico";
+import { ItemPedido } from "../../modelo/itempedido";
+import { PedidoServico } from "../../servicos/pedido/pedido.servico";
+import { Router } from "@angular/router";
 
 
 @Component({
@@ -19,12 +24,12 @@ export class LojaEfetivarComponent implements OnInit {
     this.atualizarTotal();
   }
 
-  constructor() {
-    
+  constructor(public usuarioServico: UsuarioServico, private pedidoServico: PedidoServico, private router: Router) {
+
   }
 
   public atualizarValor(produto: Produto, quantidade: number) {
-    
+
     if (!produto.precoOriginal) {
       produto.precoOriginal = produto.preco;
     }
@@ -46,5 +51,42 @@ export class LojaEfetivarComponent implements OnInit {
 
   public atualizarTotal() {
     this.total = this.produtos.reduce((acc, produto) => acc + produto.preco, 0);
+  }
+
+  public efetivarCompra() {
+    this.pedidoServico.efetivarCompra(this.criarPedido()).subscribe(
+      pedidoId => {
+        console.log(pedidoId);
+        sessionStorage.setItem("pedidoId", pedidoId.toString());
+        this.produtos = [];
+        this.carrinhoCompras.limparCarrinhoCompras();
+        this.router.navigate(["/compra-realizada-sucesso"]);
+      },
+      e => {
+        console.log(e.error);
+      });
+  }
+
+  public criarPedido(): Pedido {
+    let pedido = new Pedido();
+    pedido.usuarioId = this.usuarioServico.usuario.id;
+    pedido.cep = "07170350";
+    pedido.cidade = "São Paulo";
+    pedido.estado = "São Paulo";
+    pedido.dataPrevisaoEntrega = new Date();
+    pedido.formaPagamentoId = 1;
+    pedido.numeroEndereco = "12";
+    pedido.enderecoCompleto = "Av Papa João Paulo I 473";
+    this.produtos = this.carrinhoCompras.obterProdutos();
+    for (let produto of this.produtos) {
+      let itemPedido = new ItemPedido();
+      itemPedido.produtoId = produto.id;
+      if (!produto.quantidade) {
+        produto.quantidade = 1;
+      }
+      itemPedido.quantidade = produto.quantidade;
+      pedido.itensPedidos.push(itemPedido);
+    }
+    return pedido;
   }
 }

@@ -61,6 +61,7 @@ namespace QuickBuy.Web.Controllers
         {
             try
             {
+                usuario.Nivel = "Funcionario";
                 var usuarioCadastrado = usuarioRepositorio.Obter(usuario.Email);
                 if(usuarioCadastrado != null)
                 {
