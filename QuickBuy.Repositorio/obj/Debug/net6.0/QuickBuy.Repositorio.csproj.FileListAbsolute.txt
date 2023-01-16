@@ -1,0 +1,17 @@
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\QuickBuy.Repositorio.deps.json
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\QuickBuy.Repositorio.runtimeconfig.json
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\QuickBuy.Repositorio.dll
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\ref\QuickBuy.Repositorio.dll
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\QuickBuy.Repositorio.pdb
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\QuickBuy.Dominio.dll
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\bin\Debug\net6.0\QuickBuy.Dominio.pdb
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.csproj.AssemblyReference.cache
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.AssemblyInfoInputs.cache
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.AssemblyInfo.cs
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.csproj.CoreCompileInputs.cache
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.csproj.CopyComplete
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.dll
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\ref\QuickBuy.Repositorio.dll
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.pdb
+C:\Projetos\QuickBuy\QuickBuy.Repositorio\obj\Debug\net6.0\QuickBuy.Repositorio.genruntimeconfig.cache

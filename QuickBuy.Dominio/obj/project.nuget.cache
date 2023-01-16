@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "r5rEWYnIcIfJP0p/pfre0tLCYH+1qEsiAYTyjEdig+OJSHsgcVwP3jUT3ow0TBsQKYsCDCmhMFoJih1NeQFaYg==",
+  "dgSpecHash": "PHj0g3pypglDLJyrikM5DMF5DpuoffA8RKEUPCS/u2a80woggQHtabx/PeiRO2zlYgJawJBvAhqQ6xUQX6nXFQ==",
   "success": true,
-  "projectFilePath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+  "projectFilePath": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
   "expectedPackageFiles": [],
   "logs": []
 }

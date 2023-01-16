@@ -1,0 +1,12 @@
+C:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\net6.0\QuickBuy.Dominio.deps.json
+C:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\net6.0\QuickBuy.Dominio.dll
+C:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\net6.0\ref\QuickBuy.Dominio.dll
+C:\Projetos\QuickBuy\QuickBuy.Dominio\bin\Debug\net6.0\QuickBuy.Dominio.pdb
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.GeneratedMSBuildEditorConfig.editorconfig
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.AssemblyInfoInputs.cache
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.AssemblyInfo.cs
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.csproj.CoreCompileInputs.cache
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.dll
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\ref\QuickBuy.Dominio.dll
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.pdb
+C:\Projetos\QuickBuy\QuickBuy.Dominio\obj\Debug\net6.0\QuickBuy.Dominio.csproj.AssemblyReference.cache

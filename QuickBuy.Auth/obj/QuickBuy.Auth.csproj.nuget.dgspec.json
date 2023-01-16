@@ -1,26 +1,21 @@
 {
   "format": 1,
   "restore": {
-    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj": {}
+    "C:\\Projetos\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj": {}
   },
   "projects": {
-    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj": {
+    "C:\\Projetos\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj",
+        "projectUniqueName": "C:\\Projetos\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj",
         "projectName": "QuickBuy.Auth",
-        "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj",
+        "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Auth\\QuickBuy.Auth.csproj",
         "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Auth\\obj\\",
+        "outputPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Auth\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "netcoreapp3.1"
@@ -31,12 +26,13 @@
         },
         "frameworks": {
           "netcoreapp3.1": {
+            "targetAlias": "netcoreapp3.1",
             "projectReferences": {
-              "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
-                "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
+              "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+                "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
               },
-              "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
-                "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj"
+              "C:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
+                "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj"
               }
             }
           }
@@ -49,12 +45,7 @@
       },
       "frameworks": {
         "netcoreapp3.1": {
-          "dependencies": {
-            "Microsoft.AspNetCore.Authentication.JwtBearer": {
-              "target": "Package",
-              "version": "[3.1.1, )"
-            }
-          },
+          "targetAlias": "netcoreapp3.1",
           "imports": [
             "net461",
             "net462",
@@ -65,45 +56,33 @@
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+    "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectUniqueName": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "projectName": "QuickBuy.Dominio",
-        "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
+        "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj",
         "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\obj\\",
+        "outputPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {}
           }
         },
@@ -114,7 +93,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "imports": [
             "net461",
             "net462",
@@ -130,40 +110,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
+    "C:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+        "projectUniqueName": "C:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
         "projectName": "QuickBuy.Repositorio",
-        "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
+        "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\QuickBuy.Repositorio.csproj",
         "packagesPath": "C:\\Users\\felip\\.nuget\\packages\\",
-        "outputPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
+        "outputPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Repositorio\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Microsoft\\Xamarin\\NuGet\\",
-          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
-        ],
         "configFilePaths": [
           "C:\\Users\\felip\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Xamarin.Offline.config"
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "netcoreapp3.1"
+          "net6.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "netcoreapp3.1": {
+          "net6.0": {
+            "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
-                "projectPath": "C:\\BackEnd\\Quick\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
+              "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj": {
+                "projectPath": "C:\\Projetos\\QuickBuy\\QuickBuy.Dominio\\QuickBuy.Dominio.csproj"
               }
             }
           }
@@ -175,7 +151,8 @@
         }
       },
       "frameworks": {
-        "netcoreapp3.1": {
+        "net6.0": {
+          "targetAlias": "net6.0",
           "dependencies": {
             "Microsoft.EntityFrameworkCore": {
               "target": "Package",
@@ -215,7 +192,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\3.1.301\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\6.0.100\\RuntimeIdentifierGraph.json"
         }
       }
     }
